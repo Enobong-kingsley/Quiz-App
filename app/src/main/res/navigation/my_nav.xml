@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/scienceFragment">
+
+    <fragment
+        android:id="@+id/scienceFragment"
+        android:name="com.example.quizapp.ScienceFragment"
+        android:label="fragment_science"
+        tools:layout="@layout/fragment_science" />
+    <fragment
+        android:id="@+id/sportFragment"
+        android:name="com.example.quizapp.SportFragment"
+        android:label="fragment_sport"
+        tools:layout="@layout/fragment_sport" />
+    <fragment
+        android:id="@+id/carFragment"
+        android:name="com.example.quizapp.CarFragment"
+        android:label="fragment_car"
+        tools:layout="@layout/fragment_car" />
+    <fragment
+        android:id="@+id/logicFragment"
+        android:name="com.example.quizapp.LogicFragment"
+        android:label="fragment_logic"
+        tools:layout="@layout/fragment_logic" />
+    <fragment
+        android:id="@+id/movieFragment"
+        android:name="com.example.quizapp.MovieFragment"
+        android:label="fragment_movie"
+        tools:layout="@layout/fragment_movie" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.quizapp.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+</navigation>
