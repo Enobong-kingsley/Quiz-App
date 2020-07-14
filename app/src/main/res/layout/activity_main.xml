@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@drawable/bub">
+    android:background="@drawable/bub"
+    tools:context=".MainActivity">
 
     <ScrollView
         android:id="@+id/scrollMe"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        android:fillViewport="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
+
 
             <TextView
                 android:id="@+id/signUpButon"
@@ -28,32 +29,30 @@
                 android:layout_marginLeft="200dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
+                android:background="@drawable/signup"
                 android:clickable="true"
-                android:text="SIGN UP"
                 android:gravity="center"
+                android:text="SIGN UP"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toTopOf="parent"/>
 
-            </TextView>
-
-            <TextView
+            <Button
                 android:id="@+id/signinButton"
                 android:layout_width="150dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="200dp"
+                android:background="@drawable/signup"
                 android:clickable="true"
+                android:gravity="center"
                 android:text="SIGN IN"
                 android:textColor="@color/white"
-                android:gravity="center"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-            </TextView>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/imageView"
@@ -72,13 +71,13 @@
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="Your Mind Game"
                 android:textColor="@color/white"
                 android:textStyle="italic"
                 app:layout_constraintEnd_toEndOf="@+id/imageView"
                 app:layout_constraintStart_toStartOf="@+id/imageView"
-                app:layout_constraintTop_toBottomOf="@+id/imageView"
-                android:layout_marginTop="10dp">
+                app:layout_constraintTop_toBottomOf="@+id/imageView">
 
             </TextView>
 
@@ -93,6 +92,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView">
 
             </Button>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/card1"
                 android:layout_width="match_parent"
@@ -106,7 +106,6 @@
                 app:layout_constraintEnd_toEndOf="@+id/textView"
                 app:layout_constraintStart_toStartOf="@+id/textView"
                 app:layout_constraintTop_toBottomOf="@id/textView">
-
 
 
                 <ImageView
@@ -149,8 +148,8 @@
                     android:layout_marginTop="90dp"
                     android:background="@color/white"
                     android:hint="Password"
-                    android:paddingLeft="10dp"
-                    android:inputType="textPassword">
+                    android:inputType="textPassword"
+                    android:paddingLeft="10dp">
 
                 </EditText>
 
@@ -176,13 +175,13 @@
                 android:id="@+id/signIn"
                 android:layout_width="300dp"
                 android:layout_height="50dp"
+                android:layout_marginTop="50dp"
                 android:background="@drawable/signup"
                 android:text="Sign In"
                 android:textColor="@color/loginBackground"
                 app:layout_constraintEnd_toEndOf="@+id/card1"
                 app:layout_constraintStart_toStartOf="@+id/card1"
-                app:layout_constraintTop_toBottomOf="@+id/card1"
-                android:layout_marginTop="50dp">
+                app:layout_constraintTop_toBottomOf="@+id/card1">
 
             </Button>
 
@@ -190,8 +189,8 @@
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="OR"
                 android:layout_marginTop="25dp"
+                android:text="OR"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/signIn"
@@ -252,11 +251,9 @@
             </ImageView>
 
 
-
-
-
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </ScrollView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
